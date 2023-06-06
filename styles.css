@@ -1,0 +1,296 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    font-family: 'Source Code Pro', monospace;
+}
+body{
+    background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700015288.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    /* background-color: rgb(194, 55, 4); */
+}
+
+.alarm{
+    position: absolute;
+    bottom: 10vh;
+    left: 43%;
+    z-index: 100;
+    width: 300px;
+    height: 100px;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: rgb(159, 0, 32);
+    color: linen;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.alarm:active{
+    background-color: rgb(20,30,40);
+    color: linen;
+
+   
+}
+
+.is-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+hr{
+border: 1.8px solid rgba(250, 240, 230, 0.614);
+width: 100%;
+}
+
+#maincontainer{
+    /* background-color: rgb(20, 30, 40); */
+    backdrop-filter: blur(30px);
+    width: 50%;
+    padding: 30px;
+    color: linen;
+    box-shadow: 0px 0px 30px #000000;
+    margin: 50px auto 0 auto;
+}
+#headercontainer{
+    text-align: center;
+    margin-bottom: 0;
+}
+#headercontainer p{
+    font-weight: 700;
+}
+#headercontainer form{
+    padding: 20px;
+}
+#headercontainer input{
+    width: 50%;
+    height: 25px;
+    margin-right: 20px;
+}
+#headercontainer input{
+   font-weight: 700;
+   color: rgb(20, 30, 40)
+}
+#headercontainer button{
+    cursor: pointer;
+    background-color: rgb(20, 30, 40);
+    color: linen;
+    padding: 10px;
+    border: none;
+    font-weight: 700;
+    transition: all 0.2s ease-out;
+}
+
+#headercontainer button:hover{
+    box-shadow: 0 0 10px 0 #000000;
+}
+#alarm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 90%;
+}
+#alarm select{
+    height: 40px;
+    width: 100px;
+    font-size: 1rem;
+    margin-left: 30px;
+    font-weight: 700;
+    color: rgb(20, 30, 40)
+}
+#alarm option{
+    color: rgb(20, 30, 40);
+    font-weight: 700;
+}
+#alarm h5{
+    text-align: left;
+}
+
+.hours{
+    font-size: 1.2rem;
+    color: linen;
+    font-weight: 700;
+
+}
+.minutes{
+    font-size: 1.2rem;
+    margin-right: 5px;
+    color: linen;
+    font-weight: 700;
+}
+.dots{
+    color: linen;
+    font-weight: 700;
+}
+
+
+.reloj{
+    display: flex;
+    font-size: 1.5rem;
+    height: 60px;
+}
+
+#taskcontainer{
+    text-align: center;
+
+}
+
+.task{
+    background-color: rgb(20,30,40);
+    color: linen;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.tasktext{
+width: 70%;
+margin-left: 20px;
+background-color: rgb(20,30,40);
+border: none;
+overflow: auto;
+font-size: 1rem;
+}
+
+.edit{
+    cursor: pointer;
+    width: 50%;
+    height: 30px;
+    background-color: rgb(20,30,40);
+    border:none;
+    font-weight: 700;
+    color: linen;
+    font-size: 1rem;
+    /* transition: all 0.2s ease-out; */
+}
+.delete{
+    cursor: pointer;
+    width: 50%;
+    height: 30px;
+    background-color: rgb(20,30,40);
+    border: none;
+    color: linen;
+    font-weight: 700;
+    font-size: 1rem;
+    /* transition: all 0.3s ease-out; */
+
+}
+.task-actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    height: 50px;
+}
+
+.edit:hover{
+    background-image: linear-gradient(45deg, rgb(255, 0, 136), rgb(0, 247, 255));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.delete:hover{
+    background-image: linear-gradient(45deg, rgb(255, 0, 136), rgb(0, 247, 255));
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+}
+
+.check{
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #d5d5d5;
+    width: 30px;
+    height: 25px;
+    margin-left: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+.check::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin: 5px auto;
+    visibility: hidden;
+}
+.check:checked{
+    background-color: rgb(4, 159, 4);
+}
+.check:checked::after{
+ visibility: visible;
+}
+.checked{
+    background-color: rgb(4, 159, 4);
+}
+
+
+@media(max-width: 768px){
+    body{
+        padding-bottom: 10px;
+    }
+    #maincontainer{
+        width: 80%;
+        margin-top: 20px;
+    }
+    .task{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .task-actions{
+        width: 100%;
+    }
+    .check{
+        margin-top: 15px;
+    }
+    .tasktext{
+        width: 100%;
+        margin-left: 0;
+    }
+    #headercontainer input{
+        width: 95%;
+    }
+    form{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    #headercontainer button{
+        margin-top: 10px;
+        width: 50%;
+    }
+    .alarm{
+        position: fixed;
+        width: 50%;
+        left:25%;
+        top: 5%;
+    }
+    
+     
+}
+
+
